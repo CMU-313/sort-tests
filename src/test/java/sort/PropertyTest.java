@@ -60,13 +60,4 @@ public class PropertyTest extends AbstractSortTest {
         }
     }
 
-
-    // Test length, integrity, and ordering all at once --- is this a complete spec?
-    @Property
-    public void differentialTest(List<Integer> input) {
-        var timSortOutput = sort(input, new TimSort());
-        var mergeSortOutput = sort(input, new MergeSort());
-        assert timSortOutput.equals(mergeSortOutput);
-    }
-
 }
